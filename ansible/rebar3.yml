@@ -4,14 +4,14 @@
 - hosts: all
   tasks:
       
-      # - name: "Check if erlang is installed"
-      #   shell: "source /Users/rp/erlang/21.1/activate && which erl"
+      - name: "Check if erlang is installed"
+        shell: "source /Users/rp/erlang/21.1/activate && which erl"
         
-      # - name: "Delete old rebar3 and Clone new rebar3"
-      #   shell: rm -rf rebar3 ; git clone https://github.com/erlang/rebar3.git
+      - name: "Delete old rebar3 and Clone new rebar3"
+        shell: rm -rf rebar3 ; git clone https://github.com/erlang/rebar3.git
         
-      # - name: "bootstrap rebar3"
-      #   shell: "source /Users/rp/erlang/21.1/activate && cd rebar3 && ./bootstrap"
+      - name: "bootstrap rebar3"
+        shell: "source /Users/rp/erlang/21.1/activate && cd rebar3 && ./bootstrap"
       
       - name: "Do a local install of rebar3"
         shell: source /Users/rp/erlang/21.1/activate && cd rebar3 && ./rebar3 local install
